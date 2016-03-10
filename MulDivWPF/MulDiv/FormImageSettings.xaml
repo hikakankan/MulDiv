@@ -1,0 +1,57 @@
+﻿<Window x:Class="MulDiv.FormImageSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MulDiv"
+        mc:Ignorable="d"
+        Title="画像の設定" Width="272" Height="205">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="205" Margin="0,0,0,0" Background="{Binding Path=ViewSettings.BodyBackColor.XColor}">
+        <Button x:Name="buttonCancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="24" Margin="144,136,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="キャンセル" Click="buttonCancel_Click_Cancel" />
+        <Button x:Name="buttonOK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="24" Margin="144,104,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="OK" Click="buttonOK_Click_OK" />
+        <Button x:Name="buttonImageDot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="168,8,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="." Click="buttonImageDot_Click" />
+        <Canvas x:Name="pictureBoxImageDot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="136,8,0,0">
+            <Image Source="{Binding Path=ImageSettings[t].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="104,136,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="9" Click="buttonImage9_Click" />
+        <Canvas x:Name="pictureBoxImage9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="72,136,0,0">
+            <Image Source="{Binding Path=ImageSettings[9].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="104,104,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="8" Click="buttonImage8_Click" />
+        <Canvas x:Name="pictureBoxImage8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="72,104,0,0">
+            <Image Source="{Binding Path=ImageSettings[8].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="104,72,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="7" Click="buttonImage7_Click" />
+        <Canvas x:Name="pictureBoxImage7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="72,72,0,0">
+            <Image Source="{Binding Path=ImageSettings[7].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="104,40,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="6" Click="buttonImage6_Click" />
+        <Canvas x:Name="pictureBoxImage6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="72,40,0,0">
+            <Image Source="{Binding Path=ImageSettings[6].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="104,8,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="5" Click="buttonImage5_Click" />
+        <Canvas x:Name="pictureBoxImage5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="72,8,0,0">
+            <Image Source="{Binding Path=ImageSettings[5].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="40,136,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="4" Click="buttonImage4_Click" />
+        <Canvas x:Name="pictureBoxImage4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="8,136,0,0">
+            <Image Source="{Binding Path=ImageSettings[4].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="40,104,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="3" Click="buttonImage3_Click" />
+        <Canvas x:Name="pictureBoxImage3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="8,104,0,0">
+            <Image Source="{Binding Path=ImageSettings[3].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="40,72,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="2" Click="buttonImage2_Click" />
+        <Canvas x:Name="pictureBoxImage2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="8,72,0,0">
+            <Image Source="{Binding Path=ImageSettings[2].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="40,40,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="1" Click="buttonImage1_Click" />
+        <Canvas x:Name="pictureBoxImage1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="8,40,0,0">
+            <Image Source="{Binding Path=ImageSettings[1].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+        <Button x:Name="buttonImage0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="40,8,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="0" Click="buttonImage0_Click" />
+        <Canvas x:Name="pictureBoxImage0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Height="24" Margin="8,8,0,0">
+            <Image Source="{Binding Path=ImageSettings[0].Image.Source}" Width="24" Height="24" />
+        </Canvas>
+    </Grid>
+</Window>

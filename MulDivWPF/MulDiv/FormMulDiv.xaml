@@ -1,0 +1,42 @@
+﻿<Window x:Class="MulDiv.FormMulDiv"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MulDiv"
+        mc:Ignorable="d"
+        Title="かけ算・わり算計算機" Width="288" Height="381" Loaded="Main_Load" Closing="Main_Closing">
+    <Grid Margin="0,0,0,0" Background="{Binding Path=ViewSettings.BodyBackColor.XColor}">
+        <Grid x:Name="panelCalc" Margin="8,184,0,0" />
+        <Label x:Name="labelRel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="256" Height="26" Margin="8,32,0,0" Foreground="{Binding Path=ViewSettings.BodyTextColor.XColor}" Content="" />
+        <Label x:Name="labelInput" HorizontalAlignment="Left" VerticalAlignment="Top" Width="256" Height="26" Margin="8,8,0,0" Foreground="{Binding Path=ViewSettings.BodyTextColor.XColor}" Content="" />
+        <Button x:Name="buttonClear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="24" Margin="136,88,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="全部消去" Click="buttonClear_Click" />
+        <Button x:Name="buttonBS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="24" Margin="136,56,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="1文字消去" Click="buttonBS_Click" />
+        <Button x:Name="buttonDiv" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="136,152,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="÷" Click="buttonDiv_Click" />
+        <Button x:Name="buttonMult" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="136,120,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="×" Click="buttonMult_Click" />
+        <Button x:Name="buttonEqual" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="88,152,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="=" Click="buttonEqual_Click" />
+        <Button x:Name="buttonDot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="48,152,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="." Click="buttonDot_Click" />
+        <Button x:Name="buttonN0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="8,152,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="0" Click="buttonN0_Click" />
+        <Button x:Name="buttonN3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="88,120,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="3" Click="buttonN3_Click" />
+        <Button x:Name="buttonN2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="48,120,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="2" Click="buttonN2_Click" />
+        <Button x:Name="buttonN1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="8,120,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="1" Click="buttonN1_Click" />
+        <Button x:Name="buttonN6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="88,88,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="6" Click="buttonN6_Click" />
+        <Button x:Name="buttonN5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="48,88,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="5" Click="buttonN5_Click" />
+        <Button x:Name="buttonN4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="8,88,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="4" Click="buttonN4_Click" />
+        <Button x:Name="buttonN9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="88,56,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="9" Click="buttonN9_Click" />
+        <Button x:Name="buttonN8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="48,56,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="8" Click="buttonN8_Click" />
+        <Button x:Name="buttonN7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="24" Margin="8,56,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="7" Click="buttonN7_Click" />
+        <Button x:Name="buttonDivNext" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="24" Margin="176,152,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="わり算を続ける" Click="buttonDivNext_Click" />
+        <Button x:Name="buttonMultNext" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="24" Margin="176,120,0,0" Background="{Binding Path=ViewSettings.ButtonBackColor.XColor}" Foreground="{Binding Path=ViewSettings.ButtonTextColor.XColor}" Content="かけ算を続ける" Click="buttonMultNext_Click" />
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="表示の設定(_V)" Click="menuItemView_Click" />
+                <MenuItem Header="設定を読み込む(_L)" Click="menuItemLoadSettings_Click" />
+                <MenuItem Header="設定を保存(_S)" Click="menuItemSaveSettings_Click" />
+                <MenuItem Header="ヘルプ(_H)" Click="menuItemHelp_Click" />
+                <MenuItem Header="バージョン情報(_A)" Click="menuItemVersion_Click" />
+                <MenuItem Header="終了(_X)" Click="menuItemExit_Click" />
+            </ContextMenu>
+        </Grid.ContextMenu>
+    </Grid>
+</Window>
